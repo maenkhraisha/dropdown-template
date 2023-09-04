@@ -11,6 +11,35 @@ body {
     height: 50px;
     width: 50px; }
 
+.multiple {
+  position: relative;
+  display: flex;
+  width: 300px; }
+  .multiple__btn {
+    width: calc(100% - 30px);
+    border: 1px solid red;
+    cursor: pointer; }
+    .multiple__btn svg {
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      top: 40%;
+      right: 35px; }
+    .multiple__btn .multiple-input {
+      height: 30px;
+      border-radius: 5px;
+      background-color: white;
+      border: 1px solid #b2b2b2;
+      padding: 10px 15px;
+      font-size: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      grid-column-gap: .25rem;
+      grid-row-gap: .25rem; }
+      .multiple__btn .multiple-input .multiple-span {
+        border: 1px solid gray;
+        background-color: #b2b2b2; }
+
 ul {
   list-style: none;
   padding: 0; }
@@ -25,7 +54,7 @@ ul {
 
 .country-code {
   display: flex;
-  grid-column-gap: .15rem; }
+  grid-column-gap: 0.15rem; }
   .country-code input {
     border: none;
     font-size: 22px;
@@ -49,11 +78,11 @@ ul {
     cursor: pointer;
     width: 100%; }
     .select-dropdown__btn span {
-      margin: 0 .75rem; }
+      margin: 0 0.75rem; }
     .select-dropdown__btn svg {
       height: 25px;
       width: 25px;
-      margin: 0 .75rem; }
+      margin: 0 0.75rem; }
       .select-dropdown__btn svg.flip {
         transform: rotate(180deg); }
   .select-dropdown__content {
@@ -75,15 +104,17 @@ ul {
     .select-dropdown__content a {
       display: flex;
       align-items: center;
-      grid-column-gap: .5rem;
+      grid-column-gap: 0.5rem;
       height: 100%;
       cursor: pointer;
-      padding: .75rem 1.5rem;
+      padding: 0.75rem 1.5rem;
       transition: all 0.5s; }
+      .select-dropdown__content a.disable {
+        background-color: gray; }
       .select-dropdown__content a svg {
         height: 25px;
         width: 25px;
-        margin-inline-end: .5rem; }
+        margin-inline-end: 0.5rem; }
       .select-dropdown__content a:hover {
         color: white;
         background: #cdcaca; }

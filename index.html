@@ -190,11 +190,63 @@
         </ul>
       </div>
     </div>
+
+    <div>
+      <span>Multiple select</span>
+      <div class="select-dropdown multiple">
+        <a onclick="open_drop_down(this)" class="multiple__btn">
+          <svg>
+            <use xlink:href="icons.svg#icon-chevron-down"></use>
+          </svg>
+          <div class="multiple-input" ></div>
+        </a>
+
+        <ul class="select-dropdown__content">
+          <li><a onclick="return_mulitple_select(this)">Amman</a></li>
+          <li><a onclick="return_mulitple_select(this)">irbid</a></li>
+          <li><a onclick="return_mulitple_select(this)">jarash</a></li>
+          <li><a onclick="return_mulitple_select(this)">karak</a></li>
+          <li><a onclick="return_mulitple_select(this)">tafila</a></li>
+          <li><a onclick="return_mulitple_select(this)">zarqa</a></li>
+          <li><a onclick="return_mulitple_select(this)">ajlon</a></li>
+          <li><a onclick="return_mulitple_select(this)">shona</a></li>
+          <li><a onclick="return_mulitple_select(this)">hima</a></li>
+          <li><a onclick="return_mulitple_select(this)">mafraq</a></li>
+          <li><a onclick="return_mulitple_select(this)">wadi rum</a></li>
+          <li><a onclick="return_mulitple_select(this)">petra</a></li>
+          <li><a onclick="return_mulitple_select(this)">madba</a></li>
+          <li><a onclick="return_mulitple_select(this)">salt</a></li>
+          <li><a onclick="return_mulitple_select(this)">sama</a></li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
+
+// =====================================
+//********* multiple select function ***
+//======================================
+function return_mulitple_select(el){
+  const multiple_input = el.parentElement.parentElement.parentElement.querySelector('.multiple-input');
+  const value = el.innerText;
+  el.classList.add('disable');
+  el.removeEventListener();
+
+  const new_node = document.createElement('span');
+  new_node.classList.add('multiple-span');
+  new_node.innerHTML = value;
+
+  new_node.addEventListener("click",function(){
+    event.stopPropagation();
+    this.remove();
+  })
+
+  multiple_input.appendChild(new_node)
+}
+
   function filterFunction(el) {
     var input, filter, ul, li, a, i;
     // input = document.getElementById("myInput");
