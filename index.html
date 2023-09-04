@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+
+  <body>
+    <div>
+      <span class="fs">Country</span>
+      <div class="select-dropdown">
+        <a onclick="open_drop_down(this)" class="select-dropdown__btn">
+          <span class="fn" data-value="0">All</span>
+          <svg>
+            <use xlink:href="icons.svg#icon-chevron-down"></use>
+          </svg>
+        </a>
+        <ul class="select-dropdown__content">
+          <li>
+            <a onclick="drop_return_text(this)">
+              <span class="fn fn--gray" data-value="0">All</span>
+            </a>
+          </li>
+          <li>
+            <a onclick="drop_return_text(this)">
+              <span class="fn fn--gray" data-value="1">Region 1</span>
+            </a>
+          </li>
+          <li>
+            <a onclick="drop_return_text(this)">
+              <span class="fn fn--gray" data-value="2">Region 2</span>
+            </a>
+          </li>
+          <li>
+            <a onclick="drop_return_text(this)">
+              <span class="fn fn--gray" data-value="3">Region 3</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <span class="fs">Country</span>
+      <div class="country-code">
+        <div class="select-dropdown iso">
+          <a onclick="open_drop_down(this)" class="select-dropdown__btn">
+            <svg data-value="1">
+              <use xlink:href="icons.svg#icon-kw"></use>
+            </svg>
+            <svg>
+              <use xlink:href="icons.svg#icon-chevron-down"></use>
+            </svg>
+          </a>
+          <ul class="select-dropdown__content">
+            <li>
+              <a onclick="drop_return_svg(this)">
+                <svg data-value="1">
+                  <use xlink:href="icons.svg#icon-kw"></use>
+                </svg>
+                <span class="fn">Kuwait</span>
+                <span class="fn">+965</span>
+              </a>
+            </li>
+            <div class="line"></div>
+            <li>
+              <a onclick="drop_return_svg(this)">
+                <svg data-value="2">
+                  <use xlink:href="icons.svg#icon-sa"></use>
+                </svg>
+                <span class="fn">Saudi Arabia</span>
+                <span class="fn">+966</span>
+              </a>
+            </li>
+            <div class="line"></div>
+            <li>
+              <a onclick="drop_return_svg(this)">
+                <svg data-value="3">
+                  <use xlink:href="icons.svg#icon-om"></use>
+                </svg>
+                <span class="fn">Oman</span>
+                <span class="fn">+968</span>
+              </a>
+            </li>
+            <div class="line"></div>
+            <li>
+              <a onclick="drop_return_svg(this)">
+                <svg data-value="4">
+                  <use xlink:href="icons.svg#icon-bh"></use>
+                </svg>
+                <span class="fn">Bahrain</span>
+                <span class="fn">+973</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <input type="text" />
+      </div>
+    </div>
+
+    <div>
+      <span class="fs">searchable dropdown</span>
+      <div class="select-dropdown filter">
+        <a onclick="open_drop_down(this)" class="select-dropdown__btn">
+          <span class="fn" data-value="0">All</span>
+          <svg>
+            <use xlink:href="icons.svg#icon-chevron-down"></use>
+          </svg>
+        </a>
+        <ul class="select-dropdown__content">
+          <li>
+            <input
+              type="text"
+              name=""
+              id="filter-input1"
+              placeholder="search"
+              class="filter-input"
+              onkeyup="filterFunction(this)"
+            />
+          </li>
+          <ul>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="0">All</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="1">Amman</span>
+              </a>
+            </li>          
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="1">Irbid</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="2">Zarqa</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="3">Mafraq</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="4">Ajloun</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="5">Jerash</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="6">Madaba</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="7">Balqa</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="8">Karak</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="9">Tafileh</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="10">Maan</span>
+              </a>
+            </li>
+            <li>
+              <a onclick="drop_return_text(this)">
+                <span class="fn fn--gray" data-value="11">Aqaba</span>
+              </a>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+  function filterFunction(el) {
+    var input, filter, ul, li, a, i;
+    // input = document.getElementById("myInput");
+    filter = el.value.toUpperCase();
+    div = el.parentElement.nextElementSibling;
+    console.log(div);
+    a = div.getElementsByTagName("li");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
+
+  // function to return dropdown svg value
+  function drop_return_svg(el) {
+    var value =
+      el.firstElementChild.firstElementChild.getAttribute("xlink:href");
+    var btnEle = el.parentElement.parentElement.parentElement;
+    var ulEle = el.parentElement.parentElement;
+    var iso_value = el.firstElementChild.getAttribute("data-value");
+
+    btnEle.firstElementChild.firstElementChild.setAttribute(
+      "data-value",
+      iso_value
+    );
+
+    btnEle.firstElementChild.firstElementChild.firstElementChild.setAttribute(
+      "xlink:href",
+      value
+    );
+
+    ulEle.classList.toggle("active");
+    btnEle.firstElementChild.lastElementChild.classList.toggle("flip");
+  }
+  // function to return dropdown value
+  function drop_return_text(el) {
+    var value = el.firstElementChild.innerText;
+    var data_value = el.firstElementChild.getAttribute("data-value");
+    var btnEle = el.parentElement.parentElement.parentElement;
+    if(!btnEle.classList.contains('select-dropdown')){
+      btnEle = el.parentElement.parentElement.parentElement.parentElement;
+    }
+    var ulEle = el.parentElement.parentElement;
+
+    btnEle.firstElementChild.firstElementChild.innerText = value;
+    btnEle.firstElementChild.firstElementChild.setAttribute(
+      "data-value",
+      data_value
+    );
+    ulEle.classList.toggle("active");
+    btnEle.firstElementChild.lastElementChild.classList.toggle("flip");
+  }
+  // function to open dropdown
+  function open_drop_down(el) {
+    event.stopPropagation();
+
+    var dropdowns = document.querySelectorAll(".select-dropdown");
+
+    var is_open = el.nextElementSibling.classList.contains("active");
+
+    dropdowns.forEach((item) => {
+      if (
+        item.lastElementChild.classList.contains("active") &&
+        item.firstElementChild.lastElementChild.classList.contains("flip")
+      ) {
+        item.lastElementChild.classList.remove("active");
+        item.firstElementChild.lastElementChild.classList.remove("flip");
+      }
+    });
+
+    if (is_open) {
+      el.nextElementSibling.classList.remove("active");
+      el.lastElementChild.classList.remove("flip");
+    } else {
+      el.nextElementSibling.classList.add("active");
+      el.lastElementChild.classList.add("flip");
+    }
+
+    el.nextElementSibling.firstElementChild.firstElementChild.focus();
+    el.nextElementSibling.firstElementChild.firstElementChild.value = "";
+    filterFunction(el.nextElementSibling.firstElementChild.firstElementChild)
+  }
+
+  // ======================================================
+  // Close the drop down when click outside the drop list
+  // ======================================================
+
+  var filterInput = document.querySelector(".filter-input");
+  var body = document.querySelector("body");
+
+  filterInput.addEventListener("click", function () {
+    event.stopPropagation();
+  });
+
+  body.addEventListener(
+    "click",
+    function () {
+      $(".select-dropdown > .select-dropdown__content").removeClass("active");
+      $(".select-dropdown  svg").removeClass("flip");
+    },
+    false
+  );
+</script>
